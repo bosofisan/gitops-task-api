@@ -23,11 +23,6 @@ replicas:
 images:
   - name: task-api
     newTag: latest
-
-patches:
-  - target:
-      kind: Deployment
-      name: dev-task-api-deployment
     patch: |-
       - op: replace
         path: /spec/template/spec/containers/0/resources
